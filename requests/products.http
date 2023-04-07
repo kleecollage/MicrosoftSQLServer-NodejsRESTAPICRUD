@@ -1,0 +1,33 @@
+@api = http://localhost:3000/products 
+
+###  VER TODOS LOS REGISTROS
+GET {{api}}
+
+### VER REGISTRO POR ID
+GET {{api}}/10
+
+### INSERTAR REGISTRO
+POST {{api}}
+Content-Type: application/json
+
+{
+    "name": "UTP 500" ,
+    "description": "10 metros",
+    "quantity": "100" 
+}
+
+### ELIMINAR REGISTRO POR ID
+DELETE {{api}}/4
+
+### VER NÚMERO DE REGISTROS
+GET {{api}}/count
+
+### ACTUALIZAR INFORMACIÓN DE REGISTRO
+PUT {{api}}/10
+Content-Type: application/json
+
+{
+    "name": "Audifonos" ,
+    "description": "Beats inalámbricos",
+    "quantity": "500" 
+}
